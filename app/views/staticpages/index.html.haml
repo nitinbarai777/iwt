@@ -1,0 +1,4 @@
+- if current_user.present?
+  = render partial: 'content'
+- else
+  = render partial: 'home'

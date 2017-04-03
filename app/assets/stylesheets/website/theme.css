@@ -1,0 +1,670 @@
+/*  ///  General - Typography  */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'ubuntulight';
+    src: url('/assets/ubuntu-l-webfont.eot');
+    src: url('/assets/ubuntu-l-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/ubuntu-l-webfont.woff2') format('woff2'), url('/assets/ubuntu-l-webfont.woff') format('woff'), url('/assets/ubuntu-l-webfont.ttf') format('truetype'), url('/assets/ubuntu-l-webfont.svg#ubuntulight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('/assets/ubuntu-r-webfont.eot');
+    src: url('/assets/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/ubuntu-r-webfont.woff2') format('woff2'), url('/assets/ubuntu-r-webfont.woff') format('woff'), url('/assets/ubuntu-r-webfont.ttf') format('truetype'), url('/assets/ubuntu-r-webfont.svg#ubunturegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ubuntubold';
+    src: url('/assets/ubuntu-b-webfont.eot');
+    src: url('/assets/ubuntu-b-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/ubuntu-b-webfont.woff2') format('woff2'), url('/assets/ubuntu-b-webfont.woff') format('woff'), url('/assets/ubuntu-b-webfont.ttf') format('truetype'), url('/assets/ubuntu-b-webfont.svg#ubuntubold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+body {
+    font-family: 'ubuntulight';
+}
+
+ol li {
+    padding-bottom: 20px;
+}
+
+
+/* Btns */
+
+.btn-info {
+    height: 45px;
+    line-height: 45px;
+    border-radius: 22px;
+    font-size: 16px;
+    padding: 0 40px 0 40px;
+    border: 0;
+    background-image: none;
+    background-color: #556373;
+    color: #FFF;
+}
+
+.btn-info:hover {
+    border: 0;
+    background-image: none;
+    background-color: #7a8fa6;
+    color: #FFF;
+}
+
+.btn-info a,
+.btn-info:hover a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-info:active,
+.btn-info:focus {
+    background: #556373;
+    background-image: -moz-linear-gradient(top, rgba(85, 99, 115, 1) 0, rgba(122, 143, 166, 1) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(85, 99, 115, 1)), color-stop(100%, rgba(122, 143, 166, 1)));
+    background-image: -webkit-linear-gradient(top, rgba(85, 99, 115, 1) 0, rgba(122, 143, 166, 1) 100%);
+    background-image: -o-linear-gradient(top, rgba(85, 99, 115, 1) 0, rgba(122, 143, 166, 1) 100%);
+    background-image: -ms-linear-gradient(top, rgba(85, 99, 115, 1) 0, rgba(122, 143, 166, 1) 100%);
+    background-image: linear-gradient(to bottom, rgba(85, 99, 115, 1) 0, rgba(122, 143, 166, 1) 100%);
+    /*filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#556373', endColorstr='#7a8fa6', GradientType=0);*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #FFF
+}
+
+
+/* Img  */
+
+.imgResp {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imgDsktp {
+    display: block;
+}
+.imgDsktp_set {
+    background: url('/assets/heroNewYork.jpg') center center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.imgForMobi {
+    display: none;
+}
+
+
+/*  ///  Header  */
+
+
+/* Nav Bar  */
+
+.navbar {
+    /*min-height: 100px;*/
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+}
+
+.navbar-default {
+    background-image: none;
+    background-color: rgb(0, 41, 62);
+}
+
+
+/*  ///  Content  */
+
+#content.pageWrapper {
+    padding-top: 100px;
+}
+
+#content.homepage {
+    padding-top: 20px;
+}
+
+.row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.extendWrapper {
+    width: 100%;
+}
+
+
+/*  ///  Footer  */
+
+footer .extendWrapper {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/*  ///  HomePage Realated  */
+
+
+/* Img Parallax HomePage */
+
+.parallax.homePage {
+    background: url('/assets/heroHomePage.jpg') center center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Video HomePage */
+
+#slides {
+    z-index: 0 !important;
+    position: relative;
+}
+
+ul.slidesjs-pagination {
+    display: inline;
+    text-align: center;
+}
+
+ul.slidesjs-pagination li {
+    float: left;
+    list-style: none;
+    padding-right: 20px;
+}
+
+#VideoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* https://alistapart.com/article/creating-intrinsic-ratios-for-video */
+    height: 0;
+    margin-top: 100px;
+}
+
+#VideoWrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.extendWrapper.mappa {
+    background: url('/assets/itinerario_bg.png') repeat-x center center;
+}
+
+.bigNum {
+    color: rgb(206, 95, 24);
+    font-size: 200%;
+    font-weight: 600
+}
+
+.backgroundWrapper {
+    color: white;
+    background-color: rgb(0, 41, 62);
+    overflow: hidden;
+    padding: 20px;
+}
+
+footer .extendWrapper.loghi {
+    background-color: #fff;
+}
+
+.loghi div {
+    text-align: center;
+    color: #c9ad9b;
+}
+
+.loghi img {
+    padding: 10px;
+}
+
+
+/*  ///  Statistiche */
+
+#mainSkyScrap {
+    background: #eef5fc url('/assets/sfondo.png') bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+#DataWrapper {
+    background: url('/assets/skyscraperBg.png') bottom center;
+    background-size: auto 100%;
+    min-height: 1100px;
+}
+
+tr.piano>td:nth-child(1) {
+    text-align: center;
+}
+
+#DataWrapper span {
+    padding: 6px;
+}
+
+
+/*
+tr.piano:nth-child(3) {
+    font-weight: bold !important;
+    background: url('/assets/bgPiano.png') right bottom;
+}
+*/
+
+.posizione {
+    color: #fff
+}
+
+.piano {
+    /*height: 5%;*/
+    background: url('/assets/bgPiano.png') left bottom;
+}
+
+.big {
+    font-size: 300%;
+    color: #ccc
+}
+
+span.piu {
+    color: green
+}
+
+span.meno {
+    color: red
+}
+
+.piu {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+}
+
+table#DataWrapper {
+    /*
+    width: 54%;
+    margin-left: 22%;
+    margin-right: 24%;*/
+    color: #fff;
+    width: 100%;
+}
+
+.dataWrapper {
+    /*
+    width: 54%;
+    margin-left: 22%;
+    margin-right: 24%;*/
+    width: 100%;
+}
+
+table#DataWrapper td {
+    padding: 10px;
+}
+
+.posizione,
+.Andamento,
+.FOL,
+.RNCP,
+.More80,
+.More50 {
+    width: 5%;
+    text-align: center !important;
+}
+
+.user {
+    widows: 35%;
+}
+
+.Punteggio {
+    width: 20%;
+}
+
+.matricola {
+    width: 15%;
+    text-align: right !important;
+}
+
+.KO {
+    background-color: red;
+}
+
+.OK {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 500%;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.sphere::after {
+    background-color: rgba(255, 255, 255, 0.3);
+    content: '';
+    height: 45%;
+    width: 12%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    border-radius: 50%;
+    transform: rotate(40deg);
+}
+
+.triangle {
+    position: relative;
+    background-color: trasparent;
+    height: 20px !important;
+    width: 40px !important;
+}
+
+.triangle.up {
+    color: green;
+}
+
+.triangle.up::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    margin-left: -20px;
+    width: 0;
+    height: 0;
+    border-bottom: solid 10px green;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+}
+
+.triangle.down {
+    color: red;
+}
+
+.triangle.down:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    margin-left: -20px;
+    width: 0;
+    height: 0;
+    border-top: solid 10px red;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+}
+
+.posizione {
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+.posizione span {
+    margin-left: 20px;
+}
+
+
+/*  ///  Destinazioni */
+
+
+/* City Hero Img  */
+
+
+/*  ///  Destinazioni */
+
+
+/* City Hero Img  */
+
+#HeroWrapper {
+    position: relative;
+    height: 0;
+    margin-top: 100px;
+    display: table;
+}
+
+#HeroWrapper .parigiLondra,
+#HeroWrapper .tokyo,
+#HeroWrapper .newYork {
+    position: relative;
+    z-index: 100
+}
+
+#HeroWrapper .parigiLondra h1,
+#HeroWrapper .tokyo h1,
+#HeroWrapper .newYork h1 {
+    margin: 0;
+}
+
+.city section>h2 {
+    margin-top: 0
+}
+
+.slidesjs-pagination li {
+    display: inline;
+    padding-right: 10px;
+}
+
+ul.slidesjs-pagination {
+    -webkit-padding-start: 0px;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    footer {
+        font-size: 70%;
+    }
+    footer img {
+        padding-top: 20px;
+    }
+    footer .text-right {
+        text-align: center;
+    }
+    footer .text-center {
+        text-align: right;
+    }
+    .posizione {
+        font-size: 80%
+    }
+}
+
+
+/*  /// navbar-toggle breackpoint  */
+
+@media (max-width: 769px) {
+    #HeroWrapper {
+        margin-top: 50px;
+        padding-bottom: 28.65%;
+    }
+    .posizione {
+        font-size: 70%
+    }
+    .circle {
+        font-size: 70%
+    }
+    .imgDsktp {
+        display: none;
+    }
+    .imgForMobi {
+        display: block;
+    }
+    table#DataWrapper {
+        /*
+        position: absolute;
+        top: 0;
+        width: 88%;
+        margin-left: 5%;
+        margin-right: 7%;
+        color: #fff;*/
+    }
+    #content {
+        padding-top: 50px;
+    }
+    #content.pageWrapper {
+        padding-top: 50px;
+    }
+    .navbar {
+        min-height: 50px;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+        z-index: 999;
+    }
+    .navbar-brand {
+        height: 60px
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: white;
+    }
+    .navbar-default .navbar-toggle,
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #26313e;
+        color: white;
+    }
+    .navbar-brand img {
+        width: 65px;
+        height: auto
+    }
+    /* Turn off parallax scrolling for tablets and phones */
+    .parallax {
+        background-attachment: scroll;
+    }
+    #VideoWrapper {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 620px) {
+    #DataWrapper {
+        font-size: 60%
+    }
+    table#DataWrapper td {
+        padding: 5px
+    }
+}
+
+@media (max-width: 600px) {
+    .posizione {}
+    .circle {
+        width: 12px;
+        height: 12px
+    }
+}
+
+b {
+    font-family: 'ubuntu';
+    font-weight: 500 !important;
+}
+
+
+/* ///  Loading Stats */
+
+#Loading {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 1
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -25px;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.spinner>div {
+    background-color: #26313E;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4)
+    }
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes sk-stretchdelay {
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
+
+
+#flash_msg { position: absolute; top: 100px; width: 100%; }
+#content.desinazioni {  z-index: 100;  position: relative;  background-color: white;  padding-top: 20px;}

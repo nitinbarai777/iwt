@@ -1,0 +1,48 @@
+- if notice.present?
+  #flash_msg
+    .alert.alert-dismissible.alert-success
+      %button.close{"data-dismiss" => "alert", :type => "button"} ×
+      = notice
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "/"}
+        %img{:src => "/assets/to-the-top.png"}/
+    - if current_user.present?
+      #navbar.navbar-collapse.collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{:href => "/regolamento"} Criteri di partecipazione
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "tr", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
+              Destinazioni
+              %span.caret
+            %ul.dropdown-menu
+              -cities = City.all
+              - cities.each do |city|
+                %li
+                  = link_to city.name, city_path(name: city.name)
+                - unless city == cities.last
+                  %li.divider{:role => "separator"}
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "tr", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
+              Statistiche
+              %span.caret
+            - chart_arr = current_user.user_groups.map{|ug| ug.charts}.flatten
+            %ul.dropdown-menu
+              - chart_arr.each do |chart|
+                %li
+                  = link_to chart.name, chart_path(name: chart.name)
+                  - unless chart == chart_arr.last
+                    %li.divider{:role => "separator"}
+          / - if current_user.present?
+          /   %li= link_to 'Logout', sign_out_path
+          / - else
+          /   %li
+          /     = link_to "Login", sign_in_path          
+        / /.nav-collapse

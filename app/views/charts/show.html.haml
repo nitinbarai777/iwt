@@ -1,0 +1,76 @@
+#content.pageWrapper
+  .extendWrapper.topSkyScrap{:style => "background-color:#eef5fc; text-align:center"}
+    .container
+      .row
+        .col-md-offset-1.col-md-10.col-xs-12
+          %p
+            -if @chart.present?
+              %h3 #{@chart.name.upcase}
+          %p
+            Buongiorno
+            %b #{current_user.first_name}
+            sei al 
+            %b #{current_user.rank} 
+            posto nelle statistiche di produttività.
+
+= raw(@chart_content)
+
+:javascript
+  $(document).ready(function() {
+    chart_name = '#{params["name"]}';
+    console.log(chart_name);
+    id = $(this).text()
+    $.ajax({
+      type:'GET',
+      url: '/chart_user_data',
+      data: { name: chart_name },
+      success: function(result){
+        if(result!="undefined"){
+          $("#firstUserId").html('1');
+          $("#firstUserName").html(result[0].first_name +" "+ result[0].last_name);
+          $("#firstUserRank").html(result[0].rank);
+          for(var i=0; i< result.length;i++){
+            $('#DataWrapper').append('<tr class="piano">  <td class="user">'+result[i].first_name+' '+result[i].last_name+'</td><td class="Punteggio">'+result[i].rank+'</td><td class="Andamento">-</td><td class="FOL"><span class=" KO"> A </span></td><td class="RNCP"><span class=" KO"> B </span></td><td class="More80"><span class=" OK"> C </span></td><td class="More50"><span class=" OK"> D </span></td><td class="matricola">'+result[i].promotore+'</td></tr>');
+          }
+        }
+      }
+    })
+
+    var posPostion = function() {
+      var brwH = $(window).height() - 225;
+
+      var dataFromtop = $('#DataWrapper').height() + 100;
+      $('#DataWrapper').css('top', dataFromtop);
+
+      var infoH = $('.bigImg').height();
+      var planeH = infoH / 55;
+      var piano = $('.piano');
+      $(piano).height = planeH;
+
+      $('#DataWrapper').height(infoH);
+      $('#HouseDiv').height(infoH);
+
+      }
+
+
+      $(window).load(function() {
+
+      posPostion();
+
+      $('#Loading').fadeTo("slow", 0.00);
+
+      $('html, body').animate({
+      scrollTop: $('html, body')[0].scrollHeight
+      }, 0).animate({
+      scrollTop: -$('html, body')[0].scrollHeight
+      }, 5000);
+
+
+      });
+
+      $(window).resize(function() {
+        posPostion();
+      })
+
+  });
+

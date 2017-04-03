@@ -1,0 +1,87 @@
+#VideoWrapper
+  %video.element-to-stretch{:autoplay => "", :controls => ""}
+    %source{:src => "/IWBank_R12d.mp4", :type => "video/mp4"}
+#content.homepage
+  .container.theme-showcase{:role => "main"}
+    .row
+      .col-md-offset-2.col-md-8
+        %p
+          Benvenuto in
+          %b{:style => "color:rgb(0,41,62)"} TO THE TOP
+          , l'innovativo programma di formazione dedicato agli Esperti di Valore di IWBank Private Investments.
+        %br/
+        %p
+          %b{:style => "color:rgb(0,41,62);"} Dedicato
+          a chi ha grandi progetti, a chi pensa in grande, a chi punta al top, si prepara, cresce e migliora.
+          %br/
+          %b{:style => "color:rgb(0,41,62)"} Dedicato
+          a chi accetta la sfida, dedicato a te!
+        %br/
+
+  .extendWrapper{:style => "background-color: #f6f6f6; text-align: center"}
+    %img.imgResp{:src => "/assets/iwtothetop2017-sinergie.png", :style => "max-width:1402px; margin:0 auto;"}/
+  .container
+    .row
+      .col-md-offset-2.col-md-8
+        %p.text-center{:style => "color:rgb(206,95,24)"}
+          %b TO THE TOP è diviso in due parti:
+        %ul
+          %li
+            prima parte: fino a giugno 2017, prevede un evento formativo che si terrà a ottobre 2017 a
+            = succeed ";" do
+              %a{:href => "#", :style => "color:rgb(206,95,24)"} Parigi e Londra
+          %li
+            seconda parte: da luglio a dicembre 2017, prevede un evento formativo che si terrà a marzo 2018 a
+            %a{:href => "#", :style => "color:rgb(206,95,24)"} New York
+        %p
+          In più, a giugno 2018 è previsto un fantastico viaggio formativo finale a
+          = succeed "!" do
+            %a{:href => "#", :style => "color:rgb(206,95,24)"} Tokyo
+        %p.text-center{:style => "color:rgb(206,95,24)"}
+          %b Partecipare è semplice!
+        %p
+          Raggiungi le
+          %b migliori performance formative e commerciali
+          previste dal programma e potrai essere tu a dominare lo skyline!
+        %p
+          Inizia subito, perché i risultati di aprile potranno farti vivere in
+          %b esclusiva un’esperienza TOP
+          nelle prime due tappe previste dal programma*.
+          %br/
+          Vuoi sapere quale? Leggi le comunicazioni che ti invieremo via email nei prossimi
+          giorni, e scoprirai se il programma è all’
+          %b ”altezza” delle tue più grandi aspettative!
+        %p.text-center
+          %button.btn.btn-lg.btn-info{:type => "button"}
+            %a{:href => "criteri_di_partecipazione.html"} Leggi i criteri di partecipazione
+        %br/
+        %p.small * L’esperienza potrà essere vissuta da coloro che effettueranno anche il viaggio previsto al termine della prima e/o della seconda parte dal programma di formazione.
+  .extendWrapper.mappa
+    %img.imgResp{:src => "/assets/destinazioni.png", :style => "max-width:768px; margin:0 auto;", :usemap => "#destinazoni"}/
+    %map{:name => "destinazoni"}
+      %area{:alt => "New York", :coords => "270,152,308,200", :href => "newyork.html", :shape => "rect"}/
+      %area{:alt => "Parigi Londra", :coords => "354,146,403,201", :href => "parigi_londra.html", :shape => "rect"}/
+      %area{:alt => "Tokyo", :coords => "511,162,546,210", :href => "tokyo.html", :shape => "rect"}/
+      %area{:alt => "Parigi Londra", :coords => "173,427,320,450", :href => "parigi_londra.html", :shape => "rect"}/
+      %area{:alt => "Ner York", :coords => "395,427,471,450", :href => "newyork.html", :shape => "rect"}/
+      %area{:alt => "Tokyo", :coords => "540,427,603,450", :href => "tokyo.html", :shape => "rect"}/
+  %footer
+    .extendWrapper.loghi
+      .container
+        .row
+          .col-md-12
+            %small In collaborazione con:
+            %br/
+            %img{:alt => "Alessia", :src => "/assets/Alessia.png"}/
+            %img{:alt => "Allianz Global", :src => "/assets/Allianz-Global-Investors-Logo.svg.png"}/
+            %img{:alt => "Anima", :src => "/assets/anima.png"}/
+            %img{:alt => "aviva", :src => "/assets/aviva.png"}/
+            %img{:alt => "Axa", :src => "/assets/axa.png"}/
+            %img{:alt => "Fidelity", :src => "/assets/Fidelity.png"}/
+            %img{:alt => "Pictet", :src => "/assets/Pictet.png"}/
+    .extendWrapper
+      .container
+        .row
+          .col-md-6.col-xs-6 Copyright © 2017 IWBank S.p.A.
+          .col-md-6.col-xs-6.text-right
+            %a{:href => "https://www.iwbank.it/privacy", :target => "_blank"} Privacy
